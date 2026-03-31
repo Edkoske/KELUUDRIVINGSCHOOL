@@ -3,12 +3,12 @@
  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="KELUU Driving School in Eldoret, Kenya. Professional driving lessons with accredited instructors and modern dual-control vehicles.">
-  <meta name="theme-color" content="#1A1A2E">
   <title>KELUU Driving School</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <script type="text/plain">
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&amp;family=Poppins:wght@600;700;800;900&amp;display=swap" rel="stylesheet">
+  <script>
     tailwind.config = {
       theme: {
         extend: {
@@ -17,55 +17,16 @@
             brandDark: '#EA580C',
             teal: '#0D9488',
             dark: '#1A1A2E',
-            darkCard: '#16213E'
+            darkCard: '#16213E',
           }
         }
       }
-    };
+    }
   </script>
-  <script src="./tailwind-config.js"></script>
-  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
-  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
-  <script src="/_sdk/element_sdk.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&amp;family=Poppins:wght@600;700;800;900&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css">
-  <!-- Tailwind config is defined above -->
-  <style type="text/plain">
+  <style>
     html { scroll-behavior: smooth; }
     body { font-family: 'Sora', sans-serif; }
     .font-display { font-family: 'Poppins', sans-serif; }
-
-    :root {
-      --brand: #F97316;
-      --brandDark: #EA580C;
-      --teal: #0D9488;
-      --dark: #1A1A2E;
-      --darkCard: #16213E;
-    }
-
-    /* Premium polish: subtle grain + focus rings */
-    body { position: relative; overflow-x: hidden; }
-    #app-wrapper { position: relative; z-index: 1; }
-
-    body::before {
-      content: '';
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      z-index: 0;
-      opacity: 0.08;
-      background-image:
-        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.45'/%3E%3C/svg%3E");
-      mix-blend-mode: overlay;
-    }
-
-    section[id] { scroll-margin-top: 96px; }
-
-    :focus-visible {
-      outline: none;
-      box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.25);
-      border-color: rgba(249, 115, 22, 0.9) !important;
-    }
 
     /* Animations */
     @keyframes fadeInUp {
@@ -86,11 +47,11 @@
     }
     @keyframes float {
       0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-6px); }
+      50% { transform: translateY(-10px); }
     }
     @keyframes pulse-glow {
-      0%, 100% { box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.25); }
-      50% { box-shadow: 0 0 16px 8px rgba(249, 115, 22, 0.12); }
+      0%, 100% { box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.4); }
+      50% { box-shadow: 0 0 20px 10px rgba(249, 115, 22, 0.15); }
     }
     @keyframes slideDown {
       from { opacity: 0; transform: translateY(-20px); }
@@ -106,8 +67,8 @@
     .animate-fade-right { animation: fadeInRight 0.8s ease-out forwards; opacity: 0; }
     .animate-scale-in { animation: scaleIn 0.6s ease-out forwards; opacity: 0; }
     .animate-slide-down { animation: slideDown 0.5s ease-out forwards; }
-    .animate-float { animation: float 4.5s ease-in-out infinite; }
-    .animate-pulse-glow { animation: pulse-glow 3.5s ease-in-out infinite; }
+    .animate-float { animation: float 3s ease-in-out infinite; }
+    .animate-pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
 
     .delay-100 { animation-delay: 0.1s; }
     .delay-200 { animation-delay: 0.2s; }
@@ -130,14 +91,14 @@
       transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
     .feature-card:hover {
-      transform: translateY(-6px);
+      transform: translateY(-8px);
     }
 
     .course-card {
       transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
     .course-card:hover {
-      transform: translateY(-4px) scale(1.01);
+      transform: translateY(-6px) scale(1.02);
     }
 
     /* Testimonial slider */
@@ -152,7 +113,7 @@
 
     /* WhatsApp button */
     .whatsapp-btn {
-      animation: float 4.5s ease-in-out infinite, pulse-glow 3.5s ease-in-out infinite;
+      animation: float 3s ease-in-out infinite, pulse-glow 2s ease-in-out infinite;
     }
 
     /* Nav active state */
@@ -191,33 +152,13 @@
     .nav-scrolled {
       box-shadow: 0 4px 30px rgba(0,0,0,0.3);
       background: rgba(26,26,46,0.98) !important;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-      backdrop-filter: blur(12px);
-    }
-
-    /* FAQ details polish */
-    details summary::-webkit-details-marker { display: none; }
-    details[open] .faq-chevron { transform: rotate(180deg); }
-
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      .animate-fade-up,
-      .animate-fade-left,
-      .animate-fade-right,
-      .animate-scale-in,
-      .animate-slide-down,
-      .animate-float,
-      .animate-pulse-glow,
-      .whatsapp-btn {
-        animation: none !important;
-      }
     }
   </style>
-  <style type="text/plain">body { box-sizing: border-box; }</style>
+  <style>body { box-sizing: border-box; }</style>
   <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
  </head>
  <body class="h-full bg-dark text-white overflow-auto m-0 p-0">
-  <div id="app-wrapper" class="w-full h-full overflow-y-auto relative z-10">
+  <div id="app-wrapper" class="w-full h-full overflow-y-auto">
    <!-- Sticky Navigation -->
    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300" style="background: transparent;">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -232,17 +173,17 @@
         <span class="text-brand">KELUU</span> <span class="text-white hidden sm:inline"> Driving</span>
        </div></a> <!-- Desktop Nav -->
       <div class="hidden md:flex items-center gap-8">
-       <a href="#hero" class="nav-link text-sm font-medium text-gray-300 hover:text-white transition-colors">Home</a> <a href="#features" class="nav-link text-sm font-medium text-gray-300 hover:text-white transition-colors">Why Us</a> <a href="#courses" class="nav-link text-sm font-medium text-gray-300 hover:text-white transition-colors">Courses</a> <a href="#testimonials" class="nav-link text-sm font-medium text-gray-300 hover:text-white transition-colors">Reviews</a> <a href="#faq" class="nav-link text-sm font-medium text-gray-300 hover:text-white transition-colors">FAQ</a> <a href="#contact" class="nav-link text-sm font-medium text-gray-300 hover:text-white transition-colors">Contact</a> <a href="#contact" class="bg-brand hover:bg-brandDark text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/25"> Book Now </a>
+       <a href="#hero" class="nav-link text-sm font-medium text-gray-300 hover:text-white transition-colors">Home</a> <a href="#features" class="nav-link text-sm font-medium text-gray-300 hover:text-white transition-colors">Why Us</a> <a href="#courses" class="nav-link text-sm font-medium text-gray-300 hover:text-white transition-colors">Courses</a> <a href="#testimonials" class="nav-link text-sm font-medium text-gray-300 hover:text-white transition-colors">Reviews</a> <a href="#contact" class="nav-link text-sm font-medium text-gray-300 hover:text-white transition-colors">Contact</a> <a href="#contact" class="bg-brand hover:bg-brandDark text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/25"> Book Now </a>
       </div><!-- Mobile Menu Toggle --> <button id="menuToggle" class="md:hidden w-10 h-10 flex items-center justify-center rounded-lg bg-white/10 hover:bg-white/20 transition-colors"> <i data-lucide="menu" class="w-5 h-5" id="menuIcon"></i> </button>
      </div>
     </div><!-- Mobile Menu -->
     <div id="mobileMenu" class="hidden md:hidden bg-dark/98 backdrop-blur-lg border-t border-white/10">
      <div class="px-4 py-6 space-y-3">
-      <a href="#hero" class="mobile-link block px-4 py-3 rounded-xl text-gray-300 hover:text-white hover:bg-white/5 transition-all">Home</a> <a href="#features" class="mobile-link block px-4 py-3 rounded-xl text-gray-300 hover:text-white hover:bg-white/5 transition-all">Why Us</a> <a href="#courses" class="mobile-link block px-4 py-3 rounded-xl text-gray-300 hover:text-white hover:bg-white/5 transition-all">Courses</a> <a href="#testimonials" class="mobile-link block px-4 py-3 rounded-xl text-gray-300 hover:text-white hover:bg-white/5 transition-all">Reviews</a> <a href="#faq" class="mobile-link block px-4 py-3 rounded-xl text-gray-300 hover:text-white hover:bg-white/5 transition-all">FAQ</a> <a href="#contact" class="mobile-link block px-4 py-3 rounded-xl text-gray-300 hover:text-white hover:bg-white/5 transition-all">Contact</a> <a href="#contact" class="block text-center bg-brand hover:bg-brandDark text-white px-5 py-3 rounded-xl font-semibold transition-all mt-2">Book Now</a>
+      <a href="#hero" class="mobile-link block px-4 py-3 rounded-xl text-gray-300 hover:text-white hover:bg-white/5 transition-all">Home</a> <a href="#features" class="mobile-link block px-4 py-3 rounded-xl text-gray-300 hover:text-white hover:bg-white/5 transition-all">Why Us</a> <a href="#courses" class="mobile-link block px-4 py-3 rounded-xl text-gray-300 hover:text-white hover:bg-white/5 transition-all">Courses</a> <a href="#testimonials" class="mobile-link block px-4 py-3 rounded-xl text-gray-300 hover:text-white hover:bg-white/5 transition-all">Reviews</a> <a href="#contact" class="mobile-link block px-4 py-3 rounded-xl text-gray-300 hover:text-white hover:bg-white/5 transition-all">Contact</a> <a href="#contact" class="block text-center bg-brand hover:bg-brandDark text-white px-5 py-3 rounded-xl font-semibold transition-all mt-2">Book Now</a>
      </div>
     </div>
    </nav><!-- Hero Section -->
-   <section id="hero" class="relative w-full overflow-hidden hero-pattern" style="min-height: 100%; background: linear-gradient(135deg, rgba(26,26,46,0.82) 0%, rgba(22,33,62,0.82) 100%), url('https://images.pexels.com/photos/31411969/pexels-photo-31411969.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200') center/cover no-repeat;">
+   <section id="hero" class="relative w-full overflow-hidden hero-pattern" style="min-height: 100%; background: linear-gradient(135deg, rgba(26,26,46,0.82) 0%, rgba(22,33,62,0.82) 100%), url('https://images.pexels.com/photos/3802509/pexels-photo-3802509.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200') center/cover no-repeat;">
     <div class="absolute inset-0 bg-gradient-to-br from-dark/40 via-darkCard/40 to-dark/40"></div><!-- Decorative elements -->
     <div class="absolute top-20 right-10 w-72 h-72 bg-brand/5 rounded-full blur-3xl"></div>
     <div class="absolute bottom-20 left-10 w-96 h-96 bg-teal/5 rounded-full blur-3xl"></div>
@@ -288,7 +229,7 @@
       <div class="animate-fade-right delay-400 hidden lg:flex justify-center items-center relative">
        <div class="relative animate-float">
         <!-- Glow ring -->
-        <div class="absolute inset-0 -m-8 bg-gradient-to-br from-brand/20 to-teal/10 rounded-full blur-2xl"></div><img src="https://images.pexels.com/photos/2186248/pexels-photo-2186248.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600" alt="Driving school lesson" class="car-svg relative z-10 w-full h-auto rounded-2xl object-cover shadow-2xl" loading="lazy" style="max-width: 480px; max-height: 380px;" onerror="this.style.background='linear-gradient(135deg, #F97316, #EA580C)'; this.alt='Hero image unavailable';">
+        <div class="absolute inset-0 -m-8 bg-gradient-to-br from-brand/20 to-teal/10 rounded-full blur-2xl"></div><img src="https://images.pexels.com/photos/3587620/pexels-photo-3587620.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600" alt="Professional driving instruction" class="car-svg relative z-10 w-full h-auto rounded-2xl object-cover shadow-2xl" loading="lazy" style="max-width: 480px; max-height: 380px;" onerror="this.style.background='linear-gradient(135deg, #F97316, #EA580C)'; this.alt='Hero image unavailable';">
        </div>
       </div>
      </div>
@@ -305,7 +246,7 @@
       <p class="mt-4 text-gray-400 max-w-2xl mx-auto">We provide top-quality driving education with experienced instructors and modern vehicles.</p>
      </div>
      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div class="feature-card reveal bg-dark/60 border border-white/5 rounded-2xl overflow-hidden hover:border-brand/30 hover:shadow-xl hover:shadow-brand/5 group"><img src="https://images.pexels.com/photos/227730/pexels-photo-227730.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500" alt="Driving school vehicle" class="w-full h-32 object-cover" loading="lazy" onerror="this.style.background='linear-gradient(135deg, #F97316, #EA580C)'; this.alt='Image unavailable';">
+      <div class="feature-card reveal bg-dark/60 border border-white/5 rounded-2xl overflow-hidden hover:border-brand/30 hover:shadow-xl hover:shadow-brand/5 group"><img src="https://images.pexels.com/photos/3807517/pexels-photo-3807517.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500" alt="Modern driving school vehicle" class="w-full h-32 object-cover" loading="lazy" onerror="this.style.background='linear-gradient(135deg, #F97316, #EA580C)'; this.alt='Image unavailable';">
        <div class="p-6 sm:p-8">
         <div class="w-14 h-14 rounded-xl bg-brand/10 flex items-center justify-center mb-5 group-hover:bg-brand/20 transition-colors">
          <i data-lucide="car" class="w-7 h-7 text-brand"></i>
@@ -314,7 +255,7 @@
         <p class="text-gray-400 text-sm leading-relaxed">Fully maintained, dual-control vehicles equipped with the latest safety features for comfortable learning.</p>
        </div>
       </div>
-      <div class="feature-card reveal bg-dark/60 border border-white/5 rounded-2xl overflow-hidden hover:border-teal/30 hover:shadow-xl hover:shadow-teal/5 group"><img src="https://images.pexels.com/photos/5556556/pexels-photo-5556556.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500" alt="Driving practice with cones" class="w-full h-32 object-cover" loading="lazy" onerror="this.style.background='linear-gradient(135deg, #0D9488, #14B8A6)'; this.alt='Image unavailable';">
+      <div class="feature-card reveal bg-dark/60 border border-white/5 rounded-2xl overflow-hidden hover:border-teal/30 hover:shadow-xl hover:shadow-teal/5 group"><img src="https://images.pexels.com/photos/2311364/pexels-photo-2311364.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500" alt="Professional driving instructor" class="w-full h-32 object-cover" loading="lazy" onerror="this.style.background='linear-gradient(135deg, #0D9488, #14B8A6)'; this.alt='Image unavailable';">
        <div class="p-6 sm:p-8">
         <div class="w-14 h-14 rounded-xl bg-teal/10 flex items-center justify-center mb-5 group-hover:bg-teal/20 transition-colors">
          <i data-lucide="shield-check" class="w-7 h-7 text-teal"></i>
@@ -330,7 +271,7 @@
        <h3 class="font-display font-700 text-xl text-white mb-2">Accredited &amp; Registered</h3>
        <p class="text-gray-400 text-sm leading-relaxed">Fully registered and accredited by relevant authorities, ensuring you receive recognized certification.</p>
       </div>
-      <div class="feature-card reveal bg-dark/60 border border-white/5 rounded-2xl overflow-hidden hover:border-teal/30 hover:shadow-xl hover:shadow-teal/5 group"><img src="https://images.pexels.com/photos/27662522/pexels-photo-27662522.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500" alt="Group commuting to driving lessons" class="w-full h-32 object-cover" loading="lazy" onerror="this.style.background='linear-gradient(135deg, #0D9488, #14B8A6)'; this.alt='Image unavailable';">
+      <div class="feature-card reveal bg-dark/60 border border-white/5 rounded-2xl overflow-hidden hover:border-teal/30 hover:shadow-xl hover:shadow-teal/5 group"><img src="https://images.pexels.com/photos/3873132/pexels-photo-3873132.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500" alt="Student and instructor learning together" class="w-full h-32 object-cover" loading="lazy" onerror="this.style.background='linear-gradient(135deg, #0D9488, #14B8A6)'; this.alt='Image unavailable';">
        <div class="p-6 sm:p-8">
         <div class="w-14 h-14 rounded-xl bg-teal/10 flex items-center justify-center mb-5 group-hover:bg-teal/20 transition-colors">
          <i data-lucide="layers" class="w-7 h-7 text-teal"></i>
@@ -445,61 +386,6 @@
        <button id="prevTest" class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-brand hover:border-brand transition-all"> <i data-lucide="chevron-left" class="w-5 h-5"></i> </button>
        <div id="testimonialDots" class="flex items-center gap-2"></div><button id="nextTest" class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-brand hover:border-brand transition-all"> <i data-lucide="chevron-right" class="w-5 h-5"></i> </button>
       </div>
-     </div>
-    </div>
-   </section><!-- FAQ Section -->
-   <section id="faq" class="relative w-full py-20 sm:py-28 bg-dark">
-    <div class="absolute top-0 left-0 w-80 h-80 bg-brand/5 rounded-full blur-3xl"></div>
-    <div class="absolute bottom-0 right-0 w-96 h-96 bg-teal/5 rounded-full blur-3xl"></div>
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-     <div class="text-center mb-16 reveal">
-      <span class="inline-block text-brand text-sm font-semibold tracking-widest uppercase mb-3">FAQ</span>
-      <h2 class="font-display font-800 text-3xl sm:text-4xl lg:text-5xl text-white">Frequently Asked <span class="text-brand">Questions</span></h2>
-      <p class="mt-4 text-gray-400 max-w-2xl mx-auto">Quick answers to help you choose the right course and plan your lessons.</p>
-     </div>
-     <div class="max-w-3xl mx-auto space-y-4">
-      <details class="faq-item group bg-darkCard/70 border border-white/5 rounded-2xl p-6 transition-all hover:border-brand/30">
-       <summary class="cursor-pointer list-none flex items-center justify-between gap-4 font-display font-700 text-white">
-        <span>How long does it take to get a license?</span>
-        <span class="faq-chevron w-10 h-10 rounded-xl bg-brand/10 flex items-center justify-center transition-transform">
-         <i data-lucide="chevron-down" class="w-5 h-5 text-brand"></i>
-        </span>
-       </summary>
-       <p class="mt-4 text-gray-400 text-sm leading-relaxed">Most learners complete their training and get ready for the test within a few weeks to a couple of months, depending on your schedule and confidence.</p>
-      </details>
-      <details class="faq-item group bg-darkCard/70 border border-white/5 rounded-2xl p-6 transition-all hover:border-teal/30">
-       <summary class="cursor-pointer list-none flex items-center justify-between gap-4 font-display font-700 text-white">
-        <span>Do you offer beginner lessons?</span>
-        <span class="faq-chevron w-10 h-10 rounded-xl bg-teal/10 flex items-center justify-center transition-transform">
-         <i data-lucide="chevron-down" class="w-5 h-5 text-teal"></i>
-        </span>
-       </summary>
-       <p class="mt-4 text-gray-400 text-sm leading-relaxed">Yes. Our beginner program starts from basics like vehicle control, traffic rules, and safe decision-making—taught step-by-step.</p>
-      </details>
-      <details class="faq-item group bg-darkCard/70 border border-white/5 rounded-2xl p-6 transition-all hover:border-brand/30">
-       <summary class="cursor-pointer list-none flex items-center justify-between gap-4 font-display font-700 text-white">
-        <span>What makes KELUU different?</span>
-        <span class="faq-chevron w-10 h-10 rounded-xl bg-brand/10 flex items-center justify-center transition-transform">
-         <i data-lucide="chevron-down" class="w-5 h-5 text-brand"></i>
-        </span>
-       </summary>
-       <p class="mt-4 text-gray-400 text-sm leading-relaxed">Patient, accredited instructors, modern dual-control vehicles, and structured practice sessions—so you build confidence and real driving competence.</p>
-      </details>
-      <details class="faq-item group bg-darkCard/70 border border-white/5 rounded-2xl p-6 transition-all hover:border-teal/30">
-       <summary class="cursor-pointer list-none flex items-center justify-between gap-4 font-display font-700 text-white">
-        <span>Can I choose a course that fits my needs?</span>
-        <span class="faq-chevron w-10 h-10 rounded-xl bg-teal/10 flex items-center justify-center transition-transform">
-         <i data-lucide="chevron-down" class="w-5 h-5 text-teal"></i>
-        </span>
-       </summary>
-       <p class="mt-4 text-gray-400 text-sm leading-relaxed">Absolutely. We offer beginner lessons, advanced driving, defensive training, and refresher courses—so you can progress at the right pace.</p>
-      </details>
-     </div>
-     <div class="mt-10 text-center reveal">
-      <a href="#contact" class="inline-flex items-center gap-2 bg-brand hover:bg-brandDark text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:shadow-xl group">
-       Ask a Question
-       <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
-      </a>
      </div>
     </div>
    </section><!-- Contact Section -->
@@ -622,7 +508,7 @@
      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
     </svg></a>
   </div>
-  <script type="text/plain">
+  <script>
   // ===== Default Config =====
   const defaultConfig = {
     // Colors
@@ -632,7 +518,7 @@
     primary_action_color: '#F97316',
     secondary_action_color: '#0D9488',
     // Font
-    font_family: 'Sora',
+    font_family: 'DM Sans',
     font_size: 16,
     // Edit panel text
     hero_title: 'KELUU Driving School',
@@ -661,7 +547,7 @@
 
     testimonials.forEach((t, i) => {
       const card = document.createElement('div');
-      card.className = 'w-full shrink-0';
+      card.className = 'w-full shrink-0 px-4';
       card.innerHTML = `
         <div class="max-w-2xl mx-auto bg-dark/60 border border-white/5 rounded-2xl p-8 sm:p-10 text-center">
           <div class="flex justify-center gap-1 mb-4">
@@ -760,20 +646,26 @@
   // ===== Contact Form =====
   document.getElementById('contactForm').addEventListener('submit', (e) => {
     e.preventDefault();
-    const name = document.getElementById('contactName').value.trim();
-    const phone = document.getElementById('contactPhone').value.trim();
-    const course = document.getElementById('contactCourse').value;
-    const message = document.getElementById('contactMessage').value.trim();
+    const form = e.target;
+    const btn = document.getElementById('submitBtn');
+    const success = document.getElementById('formSuccess');
 
-    const subject = encodeURIComponent(`Driving inquiry from ${name || 'Website Visitor'}`);
-    const body = encodeURIComponent(`Name: ${name}\nPhone: ${phone}\nPreferred course: ${course}\n\nMessage:\n${message}`);
-    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=edisonkipkemoi319@gmail.com&su=${subject}&body=${body}`;
-    const mailtoUrl = `mailto:edisonkipkemoi319@gmail.com?subject=${subject}&body=${body}`;
+    btn.innerHTML = '<svg class="animate-spin w-5 h-5" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg> Sending...';
+    btn.disabled = true;
 
-    const newWindow = window.open(gmailUrl, '_blank');
-    if (!newWindow) {
-      window.location.href = mailtoUrl;
-    }
+    setTimeout(() => {
+      form.classList.add('hidden');
+      success.classList.remove('hidden');
+      lucide.createIcons();
+      setTimeout(() => {
+        form.classList.remove('hidden');
+        success.classList.add('hidden');
+        form.reset();
+        btn.innerHTML = '<span>Send Message</span><i data-lucide="send" class="w-5 h-5"></i>';
+        btn.disabled = false;
+        lucide.createIcons();
+      }, 3000);
+    }, 1500);
   });
 
   // ===== Element SDK =====
@@ -804,7 +696,7 @@
     document.querySelectorAll('.text-teal').forEach(el => el.style.color = secondary);
 
     // Font
-    const baseFontStack = 'Sora, sans-serif';
+    const baseFontStack = 'Arial, sans-serif';
     document.body.style.fontFamily = `${fontFamily}, ${baseFontStack}`;
 
     // Font size scaling
@@ -874,6 +766,5 @@
   renderTestimonials();
   lucide.createIcons();
 </script>
-  <script src="./main.js"></script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9e44fb4d818f7cd4',t:'MTc3NDg1MTM0NS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9e4d417a8480b0f0',t:'MTc3NDkzODEwNi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
