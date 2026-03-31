@@ -696,26 +696,16 @@
   // ===== Contact Form =====
   document.getElementById('contactForm').addEventListener('submit', (e) => {
     e.preventDefault();
-    const form = e.target;
-    const btn = document.getElementById('submitBtn');
-    const success = document.getElementById('formSuccess');
+    const name = document.getElementById('contactName').value.trim();
+    const phone = document.getElementById('contactPhone').value.trim();
+    const course = document.getElementById('contactCourse').value || 'General Inquiry';
+    const message = document.getElementById('contactMessage').value.trim();
 
-    btn.innerHTML = '<svg class="animate-spin w-5 h-5" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg> Sending...';
-    btn.disabled = true;
+    const subject = `Driving School Inquiry from ${name || 'Website Visitor'}`;
+    const body = `Name: ${name || 'N/A'}\nPhone: ${phone || 'N/A'}\nPreferred Course: ${course}\n\nMessage:\n${message || 'N/A'}`;
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=edisonkipkemoi319@gmail.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
-    setTimeout(() => {
-      form.classList.add('hidden');
-      success.classList.remove('hidden');
-      lucide.createIcons();
-      setTimeout(() => {
-        form.classList.remove('hidden');
-        success.classList.add('hidden');
-        form.reset();
-        btn.innerHTML = '<span>Send Message</span><i data-lucide="send" class="w-5 h-5"></i>';
-        btn.disabled = false;
-        lucide.createIcons();
-      }, 3000);
-    }, 1500);
+    window.open(gmailUrl, '_blank');
   });
 
   // ===== Element SDK =====
