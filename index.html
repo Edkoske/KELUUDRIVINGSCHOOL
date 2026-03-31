@@ -136,6 +136,23 @@
 
     /* SVG Car illustration */
     .car-svg { filter: drop-shadow(0 10px 30px rgba(249,115,22,0.3)); }
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+    .feature-card img,
+    .course-card img,
+    .reveal img,
+    .testimonial-track img,
+    .car-svg {
+      object-fit: cover;
+    }
+    section#hero {
+      background-size: cover;
+      background-position: center center;
+    }
 
     /* Intersection observer reveal */
     .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
@@ -183,7 +200,7 @@
      </div>
     </div>
    </nav><!-- Hero Section -->
-   <section id="hero" class="relative w-full overflow-hidden hero-pattern" style="min-height: 100%; background: linear-gradient(135deg, rgba(26,26,46,0.82) 0%, rgba(22,33,62,0.82) 100%), url('https://images.pexels.com/photos/3802509/pexels-photo-3802509.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200') center/cover no-repeat;">
+   <section id="hero" class="relative w-full overflow-hidden hero-pattern" style="min-height: 100%; background: linear-gradient(135deg, rgba(26,26,46,0.82) 0%, rgba(22,33,62,0.82) 100%), url('images/keluu%20cars1.jpg') center/cover no-repeat;">
     <div class="absolute inset-0 bg-gradient-to-br from-dark/40 via-darkCard/40 to-dark/40"></div><!-- Decorative elements -->
     <div class="absolute top-20 right-10 w-72 h-72 bg-brand/5 rounded-full blur-3xl"></div>
     <div class="absolute bottom-20 left-10 w-96 h-96 bg-teal/5 rounded-full blur-3xl"></div>
@@ -195,9 +212,9 @@
         <span class="w-2 h-2 bg-brand rounded-full animate-pulse"></span> <span class="text-brand text-sm font-medium">Now Enrolling — Eldoret, Kenya</span>
        </div>
        <h1 id="heroTitle" class="animate-fade-up delay-100 font-display font-900 text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-tight tracking-tight"><span class="text-white">KELUU</span><br><span class="text-brand">Driving</span> <span class="text-white"> School</span></h1>
-       <p id="heroSubtitle" class="animate-fade-up delay-200 mt-6 text-lg sm:text-xl text-gray-400 max-w-lg leading-relaxed">Learn to Drive from the Professionals</p>
+       <p id="heroSubtitle" class="animate-fade-up delay-200 mt-6 text-lg sm:text-xl text-gray-400 max-w-lg leading-relaxed">Professional driver training for first-time learners, returners, and corporate clients.</p>
        <div class="animate-fade-up delay-300 flex flex-wrap gap-4 mt-10">
-        <a href="#contact" id="heroCta" class="group relative bg-brand hover:bg-brandDark text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:shadow-xl hover:shadow-orange-500/30 flex items-center gap-2"> Book a Class Today <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i> </a> <a href="#courses" class="group border-2 border-white/20 hover:border-brand/60 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 flex items-center gap-2 hover:bg-white/5"> View Courses <i data-lucide="chevron-down" class="w-5 h-5 group-hover:translate-y-1 transition-transform"></i> </a>
+        <a href="#contact" id="heroCta" class="group relative bg-brand hover:bg-brandDark text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:shadow-xl hover:shadow-orange-500/30 flex items-center gap-2"> Start Your First Lesson <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i> </a> <a href="#courses" class="group border-2 border-white/20 hover:border-brand/60 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 flex items-center gap-2 hover:bg-white/5"> View Courses <i data-lucide="chevron-down" class="w-5 h-5 group-hover:translate-y-1 transition-transform"></i> </a>
        </div><!-- Stats -->
        <div class="animate-fade-up delay-500 grid grid-cols-3 gap-6 mt-14 pt-8 border-t border-white/10">
         <div class="stat-item text-center sm:text-left">
@@ -226,10 +243,10 @@
         </div>
        </div>
       </div><!-- Right - Hero Image -->
-      <div class="animate-fade-right delay-400 hidden lg:flex justify-center items-center relative">
+      <div class="animate-fade-right delay-400 flex justify-center items-center relative">
        <div class="relative animate-float">
         <!-- Glow ring -->
-        <div class="absolute inset-0 -m-8 bg-gradient-to-br from-brand/20 to-teal/10 rounded-full blur-2xl"></div><img src="https://images.pexels.com/photos/3587620/pexels-photo-3587620.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600" alt="Professional driving instruction" class="car-svg relative z-10 w-full h-auto rounded-2xl object-cover shadow-2xl" loading="lazy" style="max-width: 480px; max-height: 380px;" onerror="this.style.background='linear-gradient(135deg, #F97316, #EA580C)'; this.alt='Hero image unavailable';">
+        <div class="absolute inset-0 -m-8 bg-gradient-to-br from-brand/20 to-teal/10 rounded-full blur-2xl"></div><img src="images/lesson1.jpg" alt="Professional driving instruction" class="car-svg relative z-10 w-full h-auto rounded-2xl object-cover shadow-2xl" loading="lazy" style="max-width: 480px; max-height: 380px;" onerror="this.style.background='linear-gradient(135deg, #F97316, #EA580C)'; this.alt='Hero image unavailable';">
        </div>
       </div>
      </div>
@@ -246,7 +263,7 @@
       <p class="mt-4 text-gray-400 max-w-2xl mx-auto">We provide top-quality driving education with experienced instructors and modern vehicles.</p>
      </div>
      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div class="feature-card reveal bg-dark/60 border border-white/5 rounded-2xl overflow-hidden hover:border-brand/30 hover:shadow-xl hover:shadow-brand/5 group"><img src="https://images.pexels.com/photos/3807517/pexels-photo-3807517.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500" alt="Modern driving school vehicle" class="w-full h-32 object-cover" loading="lazy" onerror="this.style.background='linear-gradient(135deg, #F97316, #EA580C)'; this.alt='Image unavailable';">
+      <div class="feature-card reveal bg-dark/60 border border-white/5 rounded-2xl overflow-hidden hover:border-brand/30 hover:shadow-xl hover:shadow-brand/5 group"><img src="images/lesson2.jpg" alt="Modern driving school vehicle" class="w-full h-32 object-cover" loading="lazy" onerror="this.style.background='linear-gradient(135deg, #F97316, #EA580C)'; this.alt='Image unavailable';">
        <div class="p-6 sm:p-8">
         <div class="w-14 h-14 rounded-xl bg-brand/10 flex items-center justify-center mb-5 group-hover:bg-brand/20 transition-colors">
          <i data-lucide="car" class="w-7 h-7 text-brand"></i>
@@ -255,7 +272,7 @@
         <p class="text-gray-400 text-sm leading-relaxed">Fully maintained, dual-control vehicles equipped with the latest safety features for comfortable learning.</p>
        </div>
       </div>
-      <div class="feature-card reveal bg-dark/60 border border-white/5 rounded-2xl overflow-hidden hover:border-teal/30 hover:shadow-xl hover:shadow-teal/5 group"><img src="https://images.pexels.com/photos/2311364/pexels-photo-2311364.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500" alt="Professional driving instructor" class="w-full h-32 object-cover" loading="lazy" onerror="this.style.background='linear-gradient(135deg, #0D9488, #14B8A6)'; this.alt='Image unavailable';">
+      <div class="feature-card reveal bg-dark/60 border border-white/5 rounded-2xl overflow-hidden hover:border-teal/30 hover:shadow-xl hover:shadow-teal/5 group"><img src="images/lesson3.jpg" alt="Professional driving instructor" class="w-full h-32 object-cover" loading="lazy" onerror="this.style.background='linear-gradient(135deg, #0D9488, #14B8A6)'; this.alt='Image unavailable';">
        <div class="p-6 sm:p-8">
         <div class="w-14 h-14 rounded-xl bg-teal/10 flex items-center justify-center mb-5 group-hover:bg-teal/20 transition-colors">
          <i data-lucide="shield-check" class="w-7 h-7 text-teal"></i>
@@ -271,7 +288,7 @@
        <h3 class="font-display font-700 text-xl text-white mb-2">Accredited &amp; Registered</h3>
        <p class="text-gray-400 text-sm leading-relaxed">Fully registered and accredited by relevant authorities, ensuring you receive recognized certification.</p>
       </div>
-      <div class="feature-card reveal bg-dark/60 border border-white/5 rounded-2xl overflow-hidden hover:border-teal/30 hover:shadow-xl hover:shadow-teal/5 group"><img src="https://images.pexels.com/photos/3873132/pexels-photo-3873132.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500" alt="Student and instructor learning together" class="w-full h-32 object-cover" loading="lazy" onerror="this.style.background='linear-gradient(135deg, #0D9488, #14B8A6)'; this.alt='Image unavailable';">
+      <div class="feature-card reveal bg-dark/60 border border-white/5 rounded-2xl overflow-hidden hover:border-teal/30 hover:shadow-xl hover:shadow-teal/5 group"><img src="images/lesson4.jpg" alt="Student and instructor learning together" class="w-full h-32 object-cover" loading="lazy" onerror="this.style.background='linear-gradient(135deg, #0D9488, #14B8A6)'; this.alt='Image unavailable';">
        <div class="p-6 sm:p-8">
         <div class="w-14 h-14 rounded-xl bg-teal/10 flex items-center justify-center mb-5 group-hover:bg-teal/20 transition-colors">
          <i data-lucide="layers" class="w-7 h-7 text-teal"></i>
@@ -287,7 +304,7 @@
        <h3 class="font-display font-700 text-xl text-white mb-2">High Pass Rates</h3>
        <p class="text-gray-400 text-sm leading-relaxed">Excellent first-time pass rates thanks to our structured curriculum and dedicated instructor support.</p>
       </div>
-      <div class="feature-card reveal bg-dark/60 border border-white/5 rounded-2xl overflow-hidden hover:border-teal/30 hover:shadow-xl hover:shadow-teal/5 group"><img src="https://images.pexels.com/photos/5632399/pexels-photo-5632399.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500" alt="Theory test study materials" class="w-full h-32 object-cover" loading="lazy" onerror="this.style.background='linear-gradient(135deg, #0D9488, #14B8A6)'; this.alt='Image unavailable';">
+      <div class="feature-card reveal bg-dark/60 border border-white/5 rounded-2xl overflow-hidden hover:border-teal/30 hover:shadow-xl hover:shadow-teal/5 group"><img src="images/keluu%20cars2.jpg" alt="Theory test study materials" class="w-full h-32 object-cover" loading="lazy" onerror="this.style.background='linear-gradient(135deg, #0D9488, #14B8A6)'; this.alt='Image unavailable';">
        <div class="p-6 sm:p-8">
         <div class="w-14 h-14 rounded-xl bg-teal/10 flex items-center justify-center mb-5 group-hover:bg-teal/20 transition-colors">
          <i data-lucide="book-open" class="w-7 h-7 text-teal"></i>
@@ -363,7 +380,42 @@
       </div>
      </div>
     </div>
-   </section><!-- CTA Banner -->
+   </section>
+   <!-- Fleet & Instructors Section -->
+   <section id="fleet" class="relative w-full py-20 sm:py-28 bg-darkCard">
+    <div class="absolute top-0 left-0 w-72 h-72 bg-brand/5 rounded-full blur-3xl"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+     <div class="text-center mb-16 reveal">
+      <span class="inline-block text-teal text-sm font-semibold tracking-widest uppercase mb-3">Our Fleet & Team</span>
+      <h2 class="font-display font-800 text-3xl sm:text-4xl lg:text-5xl text-white">Modern vehicles, expert instructors.</h2>
+      <p class="mt-4 text-gray-400 max-w-2xl mx-auto">Experience training with premium dual-control cars and one-on-one coaching designed for quick, safe progress.</p>
+     </div>
+     <div class="grid lg:grid-cols-3 gap-6">
+      <div class="reveal bg-dark/60 border border-white/5 rounded-3xl overflow-hidden group">
+       <img src="images/lesson1.jpg" alt="Instructor coaching a learner driver" class="w-full h-72 object-cover" loading="lazy" onerror="this.style.background='linear-gradient(135deg, #F97316, #EA580C)'; this.alt='Image unavailable';">
+       <div class="p-6">
+        <h3 class="font-display font-700 text-xl text-white mb-3">Expert Coaching</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">Certified instructors deliver patient, practical lessons for all ages and experience levels.</p>
+       </div>
+      </div>
+      <div class="reveal bg-dark/60 border border-white/5 rounded-3xl overflow-hidden group">
+       <img src="images/lesson2.jpg" alt="Driving practice course with cones" class="w-full h-72 object-cover" loading="lazy" onerror="this.style.background='linear-gradient(135deg, #0D9488, #14B8A6)'; this.alt='Image unavailable';">
+       <div class="p-6">
+        <h3 class="font-display font-700 text-xl text-white mb-3">Safe Practice Areas</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">Structured practice sessions in safe, controlled environments help you build confidence quickly.</p>
+       </div>
+      </div>
+      <div class="reveal bg-dark/60 border border-white/5 rounded-3xl overflow-hidden group">
+       <img src="images/lesson3.jpg" alt="Student driving a car with instructor" class="w-full h-72 object-cover" loading="lazy" onerror="this.style.background='linear-gradient(135deg, #0D9488, #14B8A6)'; this.alt='Image unavailable';">
+       <div class="p-6">
+        <h3 class="font-display font-700 text-xl text-white mb-3">Modern Fleet</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">Learn in modern dual-control cars that are maintained to the highest safety standards.</p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+   <!-- CTA Banner -->
    <section class="relative w-full py-16 sm:py-20 overflow-hidden">
     <div class="absolute inset-0 bg-gradient-to-r from-brand via-brandDark to-brand"></div>
     <div class="absolute inset-0 opacity-10" style="background-image: url(&quot;data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E&quot;);"></div>
@@ -434,7 +486,7 @@
         </div>
         <div>
          <h4 class="font-display font-700 text-white mb-1">Email</h4>
-         <p class="text-gray-400 text-sm">info@keluudriving.co.ke</p>
+         <a href="mailto:edisonkipkemoi319@gmail.com" class="text-gray-400 text-sm hover:text-brand transition-colors">edisonkipkemoi319@gmail.com</a>
         </div>
        </div>
       </div><!-- Contact Form -->
@@ -503,7 +555,7 @@
       <p class="text-gray-600 text-xs">KVDA Plaza, Eldoret, Kenya</p>
      </div>
     </div>
-   </footer><!-- Floating WhatsApp Button --> <a href="https://wa.me/254707899202" target="_blank" rel="noopener noreferrer" class="whatsapp-btn fixed bottom-6 right-6 z-50 w-14 h-14 sm:w-16 sm:h-16 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-2xl shadow-green-500/30 transition-colors group">
+   </footer><!-- Floating WhatsApp Button --> <a href="https://wa.me/254710241295" target="_blank" rel="noopener noreferrer" class="whatsapp-btn fixed bottom-6 right-6 z-50 w-14 h-14 sm:w-16 sm:h-16 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-2xl shadow-green-500/30 transition-colors group">
     <svg class="w-7 h-7 sm:w-8 sm:h-8 text-white group-hover:scale-110 transition-transform" viewbox="0 0 24 24" fill="currentColor">
      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
     </svg></a>
@@ -522,10 +574,10 @@
     font_size: 16,
     // Edit panel text
     hero_title: 'KELUU Driving School',
-    hero_subtitle: 'Learn to Drive from the Professionals',
-    cta_text: 'Book a Class Today',
+    hero_subtitle: 'Professional driver training for first-time learners, returners, and corporate clients.',
+    cta_text: 'Start Your First Lesson',
     location_text: 'KVDA Plaza, Eldoret',
-    phone_text: '0707899202',
+    phone_text: '0710241295',
     footer_description: 'Your trusted partner on the road to driving excellence. Licensed and accredited driving school in Eldoret, Kenya.'
   };
 
